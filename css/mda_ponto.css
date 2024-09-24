@@ -1,0 +1,9 @@
+/* *******PHONE******* */
+@media  (max-width: 743px){
+    .ponto {
+        margin: 20px 15px;
+    }
+    img{
+        padding: 20px 0 20px;
+    }
+}
