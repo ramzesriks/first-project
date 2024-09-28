@@ -4,64 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>ПОРТФОЛИО</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/my.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
 </head>
 
 <body>
     <header>
-       
+        <nav class="dws-menu " >
+            <ul>
+                <li><a href="#" class="link"><i class="fa fa-home"></i>Главная</a></li>
+                <li><a href="#portfolio" class="link"><i class="fa fa-folder"></i>Портфолио</a></li>
+                <li><a href="#contacts" class="link"><i class="fa fa-phone"></i>Контакты &blacktriangledown;</a>
+                    <ul class="ws-menu">
+                        <li><a href="https://t.me/Kholiavskiy" class="link"><i class="fa fa-telegram"></i>Телеграм</a></li>
+                        <li><a href="https://wa.me/79497423628/" class="link"><i class="fa fa-whatsapp"></i>Ватсап</a></li>
+                        <li><a href="https://vk.com/id634834045" class="link"><i class="fa fa-vk"></i>Вконтакте</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
         <div class="container">
             <div class="header-row">
                 <img src="img/photo.jpg" srcset="img/photo@2x.jpg 2x" alt="photo">
                 <div class="header-text">
-                    <h1>Холявский <br> Роман</h1>
-                    <p>фрилансер, веб-разработчик<br>создатель сайтов</p>                                           
+                    <h1> Роман <br> Холявский </h1>
+                    <p>фрилансер, веб-разработчик<br>создатель сайтов</p>
                     <div class="header-btns">
-                        <a href="#" class="btn">Портфолио</a>
-                        <a href="#" class="btn_outline">Контакты</a>
+                        <a href="#portfolio" class="btn">Портфолио</a>
+                        <a href="#contacts" class="btn_outline">Контакты</a>
+
                     </div>
                 </div>
             </div>
         </div>
         <video class="header-video" autoplay muted loop>
-            <source type="video/mp4" src="/video/vidos1.mp4">
+            <source type="video/mp4" src="video/vidos1.mp4">
         </video>
     </header>
 
-    <main>       
-            <div class="containers">
-                <h2>Портфолио</h2>
-                <div class="projects">                  
-                    <div class="center">
-                        <img src="/img/project-01.jpg" srcset="/img/project-01@2x.jpg" alt="">
-                        <a href="prj_1.html">Сайт магазина мебели</a>
+    <main>
+        <div class="containers" id="portfolio">
+            <h2>Портфолио</h2>
+            <div class="projects">
+                <div class="center">
+                    <a href="prj_1.html"><img src="img/project-01.jpg" srcset="img/project-01@2x.jpg" alt="photo"></a>
+                    <a href="prj_1.html">Сайт магазина мебели</a>
 
-                        <a href="prj_2.html"><img src="/img/project-02.jpg" srcset="/img/project-02@2x.jpg" alt="photo"></a>
-                        <a href="prj_2.html">Сайт туристического агенства</a>
+                    <a href="prj_2.html"><img src="img/project-02.jpg" srcset="img/project-02@2x.jpg" alt="photo"></a>
+                    <a href="prj_2.html">Сайт туристического агенства</a>
 
-                        <a href="prj_3.html"><img src="/img/project-03.jpg" srcset="/img/project-03@2x.jpg" alt="photo"></a>
-                        <a href="prj_3.html">Сайт жилого комплекса</a>
-                    </div>
+                    <a href="prj_3.html"><img src="img/project-03.jpg" srcset="img/project-03@2x.jpg" alt="photo"></a>
+                    <a href="prj_3.html">Сайт жилого комплекса</a>
                 </div>
-            </div>       
+            </div>
+        </div>
     </main>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <h3>Контакты</h3>
         <div class="massage">
             <div class="telega">
-                <img src="/img/telegram.svg" alt="icon">
+                <img src="img/telegram.svg" alt="icon">
                 <a href="https://t.me/Kholiavskiy">Написать в Telegram</a>
             </div>
             <div class="whats">
-                <img src="/img/whatsapp.svg" alt="icon">
-                <a href="https://wa.me/79497423628/?text=Привет!%20Я%20хочу%20купить%20печенье./">Сooбщить в WhatsApp</a>
+                <img src="img/whatsapp.svg" alt="icon">
+                <a href="https://wa.me/79497423628/">Сooбщить в WhatsApp</a>
             </div>
             <div class="vcont">
-                <img src="/img/vk.svg" alt="icon">
+                <img src="img/vk.svg" alt="icon">
                 <a href="https://vk.com/id634834045">Связаться Вконтакте</a>
             </div>
         </div>
@@ -72,7 +86,7 @@
             <h4>© Холявский Роман</h4>
             <h4>HTML верстальщик, создание сайтов Донецк</h4>
             <div class="poddon">
-                <img src="/img/laptop.svg" alt="icon">
+                <img src="img/laptop.svg" alt="icon">
                 <h5>Макет свёрстан на курсе "Интернет программирование"</h5>
             </div>
         </div>

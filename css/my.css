@@ -6,10 +6,9 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background: aquamarine;
-    /* background: linear-gradient(45deg, #FFFFFF, aquamarine); */
+    background: radial-gradient(ellipse at center, rgba(79, 133, 187, 1) 0%, rgba(79, 133, 187, 1) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
 }
-
             /*ШАПКА*/
 header {
     /* background: linear-gradient(-45deg, #2F2F2F, #000000); */
@@ -20,6 +19,171 @@ header {
     border-bottom-right-radius: 100px;
     margin-bottom: 80px;
 }
+          /* *******МЕНЮ****** */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(red, green, blue, 0.7);
+    z-index: 8;
+}
+.dws-menu>ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+    flex-wrap: wrap;
+}
+.dws-menu>ul li a {
+    display: block;
+    color: #C9CC9D;
+    font-weight: 500;
+    text-shadow: #FFFFFF;
+    padding: 15px 15px 15px 40px;
+    /* плавное исчезание */
+    transition: all 0.4s ease;
+}
+.dws-menu>ul li {
+    position: relative;
+}
+.dws-menu>ul li>a i.fa {
+    position: absolute;
+    left: 9px;
+    font-size: 28px;   
+}
+            /* ФОКУС для МАШИННОГО ЧТЕНИЯ(TAB) */
+a:focus {
+    outline: none;
+    background-color: yellow;
+}
+.dws-menu li:hover>a,         /*УДЕРЖАНИЕ ЭФФЕКТА */
+.dws-menu li a:hover {
+    font-weight: bold;
+    /* плавное появление */
+    transition: all 0.4s ease;
+}
+li:focus-within > .ws-menu,     /*ФОКУС для СКРЫТОГО МЕНЮ */
+li:hover > .ws-menu {
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+                /* ПОДМЕНЮ */
+.dws-menu li ul {
+    position: absolute;
+    min-width: 150px;
+    /* display: none; */
+    /* ЗАМЕНА НА: */
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+.dws-menu li>ul li {
+    margin-bottom: 3px;
+    left: 80px;   
+}
+.dws-menu li>ul li a {
+    color: #000000;  
+    box-shadow: 1px 5px 10px -5px black;
+    border-radius: 5px;
+}
+.dws-menu li:hover>ul {
+    display: block;   
+}
+            /* АНИМЦИЯ МЕНЮ */
+.link {
+    position: relative;
+    text-decoration: none;
+    color: #C9CC9D;
+    font-size: 24px;
+    font-weight: bold;
+}
+.link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 0;
+    height: 3px;
+    background-color: #C9CC9D;
+    transition: width 0.4s ease, left 0.4s ease;
+}
+.link:hover::after {
+    width: 100%;
+    left: 0;
+}
+          /* АНИМЦИЯ ПОДМЕНЮ */
+.ws-menu .link {
+    position: relative;
+    text-decoration: none;
+    color: #C9CC9D;
+    font-size: 24px;
+    font-weight: 500;
+    /* opacity: 0.65; */
+}
+.ws-menu .link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 0;
+    height: 3px;
+    background-color: #333;   
+    transition: width 0.4s ease, left 0.4s ease;
+}
+.ws-menu li a:hover {
+    color: #333;
+    font-weight: bold;
+    background: linear-gradient(to right, rgba(178, 225, 255, 1) 0%, rgba(102, 182, 252, 1) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
+    opacity: 0.95;
+}
+.ws-menu .link:hover::after {
+    width: 80%;
+    left: 20px;
+}
+/* 
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-decoration: 1px underline #C9CC9D ;   
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+.navigation a{
+    font-size: 18px;
+    font-weight: 500;
+    font-weight: u;
+    color: #C9CC9D;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.navigation:hover a{
+    filter: blur(15px);
+}
+.navigation:hover a:hover{
+    color: #039be5;
+    text-decoration: 1px underline #039be5;
+    filter: blur(0px);
+}
+.menu ul li a{
+    
+    position: relative;
+    float: right;
+}
+.menu ul li a ul li a{
+    display: block;
+    position: absolute;
+    padding: 10px;
+    background: #039be5;
+    border-radius: 10px;
+    display: none;
+} */
+
+
+        /* ШАПКА-КОНТЕНТ */
 header .container{
     position: relative;
     z-index: 7;
@@ -78,7 +242,8 @@ h1 {
     font-weight: 500;
     font-size: 18px;
     border-radius: 8px;
-    background: #000000;
+    /* background: #000000; */
+    border: 1px solid #3b3b3b;
     color: #808080;
     transition: all 1s;
 }
@@ -105,7 +270,7 @@ h1 {
     transition: 1s;
 }
 
-/*ПОРТФОЛИО CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC*/
+               /*ПОРТФОЛИО */
 .containers{
     max-width: 1200px;
     /* display: flex; */
@@ -125,8 +290,7 @@ h1 {
 .containers img{
     border-radius: 30px;
     transition: opacity 0.2s ease-in;
-    margin-top: 30px;
-    
+    margin-top: 30px;   
 }
 .containers img:hover{
     opacity: 0.8;
@@ -147,7 +311,8 @@ h1 {
     /* color: #dc143c; */
     transition: 0.5s;
 }
-/* CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC */
+
+           /* КОНТАКТЫ */
 .contacts{
     background: linear-gradient(45deg, #2F2F2F, #000000);
     padding-bottom: 80px;
@@ -235,7 +400,7 @@ h1 {
     height: 75px;
     transition: 1s;
 }
-                       /* ПОДВАЛ */
+         /* ПОДВАЛ */
 footer{   
     background: #000000;
     color: #5D5D5D;
