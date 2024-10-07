@@ -143,46 +143,8 @@ li:hover > .ws-menu {
     width: 80%;
     left: 20px;
 }
-/* 
 
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    text-decoration: 1px underline #C9CC9D ;   
-    padding-top: 10px;
-    flex-wrap: wrap;
-}
-.navigation a{
-    font-size: 18px;
-    font-weight: 500;
-    font-weight: u;
-    color: #C9CC9D;
-    text-transform: uppercase;
-    transition: 0.5s;
-}
-.navigation:hover a{
-    filter: blur(15px);
-}
-.navigation:hover a:hover{
-    color: #039be5;
-    text-decoration: 1px underline #039be5;
-    filter: blur(0px);
-}
-.menu ul li a{
-    
-    position: relative;
-    float: right;
-}
-.menu ul li a ul li a{
-    display: block;
-    position: absolute;
-    padding: 10px;
-    background: #039be5;
-    border-radius: 10px;
-    display: none;
-} */
-
-
+  
         /* ШАПКА-КОНТЕНТ */
 header .container{
     position: relative;
@@ -275,7 +237,7 @@ h1 {
     max-width: 1200px;
     /* display: flex; */
     align-items: center;
-    margin: 0 auto;
+    margin: 200px auto;
 }
 .containers h2{
     margin-bottom: 20px;
